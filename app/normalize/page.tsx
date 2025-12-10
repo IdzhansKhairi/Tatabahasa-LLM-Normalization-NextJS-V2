@@ -590,7 +590,7 @@ export default function NormalizePage() {
 
                 </div>
             </div>
-            <footer className="py-4 border-top bg-light">
+            <footer className="py-4 border-top footer-bg">
                 <div className="container text-center">
                     <div className="mb-3">
                         <span className="text-muted">
@@ -603,7 +603,7 @@ export default function NormalizePage() {
                             href="https://nextjs.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn btn-sm btn-outline-secondary"
+                            className="btn btn-sm btn-outline-dark"
                             style={{ borderRadius: '20px' }}
                         >
                             <i className="bi bi-arrow-up-right-circle me-1"></i>
@@ -613,7 +613,7 @@ export default function NormalizePage() {
                             href="https://jamaibase.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn btn-sm btn-outline-secondary"
+                            className="btn btn-sm btn-outline-dark"
                             style={{ borderRadius: '20px' }}
                         >
                             <i className="bi bi-arrow-up-right-circle me-1"></i>

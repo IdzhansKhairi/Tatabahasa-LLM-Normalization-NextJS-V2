@@ -9,14 +9,17 @@ export default function Home() {
       {/* Floating Navigation Button */}
       <Link
         href="/normalize"
-        className="btn btn-primary position-fixed shadow-lg d-flex align-items-center gap-2"
+        className="btn position-fixed shadow-lg d-flex align-items-center gap-2"
         style={{
           top: '20px',
           right: '20px',
           zIndex: 1050,
           borderRadius: '50px',
           padding: '12px 24px',
-          fontWeight: '600'
+          fontWeight: '600',
+          backgroundColor: '#f5c065',
+          border: 'none',
+          color: '#2c3e50'
         }}
       >
         <i className="bi bi-pencil-square"></i>
@@ -25,33 +28,64 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="min-vh-100 d-flex align-items-center" style={{
-        background: 'linear-gradient(135deg, #4a90e2 0%, #357abd 100%)',
-        color: 'white'
+        background: 'linear-gradient(135deg, #e8d5b7 0%, #f5e6d3 100%)',
+        color: '#2c3e50'
       }}>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <div className="mb-3">
-                <span className="badge bg-light text-primary px-3 py-2" style={{ fontSize: '0.9rem' }}>
+                <span className="badge px-3 py-2" style={{
+                  fontSize: '0.9rem',
+                  backgroundColor: '#e63946',
+                  color: 'white'
+                }}>
                   Final Year Project
                 </span>
               </div>
-              <h1 className="display-4 fw-bold mb-4" style={{ lineHeight: '1.2' }}>
+              <h1 className="fw-bold mb-4" style={{
+                lineHeight: '1.2',
+                fontSize: '3.5rem',
+                color: '#2d6a4f'
+              }}>
                 Malay Language Text Normalization
               </h1>
-              <p className="lead mb-4" style={{ fontSize: '1.2rem', opacity: 0.95 }}>
+              <p className="lead mb-4" style={{
+                fontSize: '1.2rem',
+                color: '#495057'
+              }}>
                 A research project exploring AI-powered normalization of informal Malay text
                 using Large Language Models through JamAI Base platform.
               </p>
-              <div className="d-flex gap-3 flex-wrap">
-                <Link href="/normalize" className="btn btn-light btn-lg px-4 py-3">
-                  <i className="bi bi-play-circle me-2"></i>
-                  Try the Demo
-                </Link>
-                <a href="#about" className="btn btn-outline-light btn-lg px-4 py-3">
-                  <i className="bi bi-book me-2"></i>
-                  Learn More
-                </a>
+              <div className="p-4 bg-white rounded-4 shadow-sm" style={{ display: 'inline-block' }}>
+                <div className="d-flex gap-3 flex-wrap">
+                  <Link
+                    href="/normalize"
+                    className="btn btn-lg px-4 py-3 fw-semibold"
+                    style={{
+                      backgroundColor: '#f5c065',
+                      border: 'none',
+                      color: '#2c3e50'
+                    }}
+                  >
+                    <i className="bi bi-play-circle me-2"></i>
+                    Try the Demo
+                  </Link>
+                  <a
+                    href="https://github.com/IdzhansKhairi/Tatabahasa-LLM-Normalization-NextJS-V2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-lg px-4 py-3 fw-semibold"
+                    style={{
+                      backgroundColor: '#2d6a4f',
+                      border: 'none',
+                      color: 'white'
+                    }}
+                  >
+                    <i className="bi bi-github me-2"></i>
+                    View on GitHub
+                  </a>
+                </div>
               </div>
             </div>
             <div className="col-lg-6 text-center">
@@ -154,7 +188,7 @@ export default function Home() {
             <div className="col-lg-3 col-md-6">
               <div className="text-center p-4">
                 <div className="mb-3">
-                  <i className="bi bi-lightbulb text-warning" style={{ fontSize: '3rem' }}></i>
+                  <i className="bi bi-lightbulb" style={{ fontSize: '3rem', color: '#f5c065' }}></i>
                 </div>
                 <h5 className="fw-bold mb-2">Context-Aware</h5>
                 <p className="text-muted small">
@@ -165,7 +199,7 @@ export default function Home() {
             <div className="col-lg-3 col-md-6">
               <div className="text-center p-4">
                 <div className="mb-3">
-                  <i className="bi bi-bar-chart text-primary" style={{ fontSize: '3rem' }}></i>
+                  <i className="bi bi-bar-chart" style={{ fontSize: '3rem', color: '#2d6a4f' }}></i>
                 </div>
                 <h5 className="fw-bold mb-2">Detailed Analysis</h5>
                 <p className="text-muted small">
@@ -176,7 +210,7 @@ export default function Home() {
             <div className="col-lg-3 col-md-6">
               <div className="text-center p-4">
                 <div className="mb-3">
-                  <i className="bi bi-boxes text-success" style={{ fontSize: '3rem' }}></i>
+                  <i className="bi bi-boxes" style={{ fontSize: '3rem', color: '#e63946' }}></i>
                 </div>
                 <h5 className="fw-bold mb-2">Model Flexibility</h5>
                 <p className="text-muted small">
@@ -187,7 +221,7 @@ export default function Home() {
             <div className="col-lg-3 col-md-6">
               <div className="text-center p-4">
                 <div className="mb-3">
-                  <i className="bi bi-card-list text-info" style={{ fontSize: '3rem' }}></i>
+                  <i className="bi bi-card-list" style={{ fontSize: '3rem', color: '#f5c065' }}></i>
                 </div>
                 <h5 className="fw-bold mb-2">Normalization Summary</h5>
                 <p className="text-muted small">
@@ -200,7 +234,7 @@ export default function Home() {
       </section>
 
       {/* Technology Section */}
-      <section className="py-5" style={{ background: '#2c3e50', color: 'white' }}>
+      <section className="py-5" style={{ background: '#2d6a4f', color: 'white' }}>
         <div className="container py-5">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
@@ -210,7 +244,7 @@ export default function Home() {
               </p>
               <div className="mb-3">
                 <h5 className="fw-bold mb-2">
-                  <i className="bi bi-check-circle-fill text-success me-2"></i>
+                  <i className="bi bi-check-circle-fill me-2" style={{ color: '#f5c065' }}></i>
                   Current Model: ELLM Qwen3
                 </h5>
                 <p className="text-white-50">
@@ -219,7 +253,7 @@ export default function Home() {
               </div>
               <div className="mb-3">
                 <h5 className="fw-bold mb-2">
-                  <i className="bi bi-check-circle-fill text-success me-2"></i>
+                  <i className="bi bi-check-circle-fill me-2" style={{ color: '#f5c065' }}></i>
                   Scalable Architecture
                 </h5>
                 <p className="text-white-50">
@@ -228,7 +262,7 @@ export default function Home() {
               </div>
               <div className="mb-3">
                 <h5 className="fw-bold mb-2">
-                  <i className="bi bi-check-circle-fill text-success me-2"></i>
+                  <i className="bi bi-check-circle-fill me-2" style={{ color: '#f5c065' }}></i>
                   Next.js Framework
                 </h5>
                 <p className="text-white-50">
@@ -282,7 +316,7 @@ export default function Home() {
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body p-4">
                   <h5 className="card-title fw-bold mb-3">
-                    <i className="bi bi-journal-text text-primary me-2"></i>
+                    <i className="bi bi-journal-text me-2" style={{ color: '#2d6a4f' }}></i>
                     Academic Research
                   </h5>
                   <p className="card-text text-muted">
@@ -295,7 +329,7 @@ export default function Home() {
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body p-4">
                   <h5 className="card-title fw-bold mb-3">
-                    <i className="bi bi-people text-success me-2"></i>
+                    <i className="bi bi-people me-2" style={{ color: '#f5c065' }}></i>
                     Content Moderation
                   </h5>
                   <p className="card-text text-muted">
@@ -308,7 +342,7 @@ export default function Home() {
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body p-4">
                   <h5 className="card-title fw-bold mb-3">
-                    <i className="bi bi-book text-warning me-2"></i>
+                    <i className="bi bi-book me-2" style={{ color: '#e63946' }}></i>
                     Educational Tools
                   </h5>
                   <p className="card-text text-muted">
@@ -321,7 +355,7 @@ export default function Home() {
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body p-4">
                   <h5 className="card-title fw-bold mb-3">
-                    <i className="bi bi-chat-square-dots text-info me-2"></i>
+                    <i className="bi bi-chat-square-dots me-2" style={{ color: '#2d6a4f' }}></i>
                     NLP Preprocessing
                   </h5>
                   <p className="card-text text-muted">
@@ -335,19 +369,63 @@ export default function Home() {
       </section>
 
       {/* Acknowledgments Section */}
-      <section className="py-5" style={{ background: '#34495e', color: 'white' }}>
+      <section className="py-5" style={{ background: '#6d4c41', color: 'white' }}>
         <div className="container py-5">
           <div className="text-center mb-5">
             <h2 className="display-5 fw-bold mb-3">Acknowledgments</h2>
             <p className="lead" style={{ opacity: 0.9 }}>
-              This project would not be possible without the support of:
+              This project would not be possible without the invaluable support of:
             </p>
           </div>
-          <div className="row g-4">
+          <div className="row g-4 mb-4">
             <div className="col-md-4">
               <div className="card bg-white bg-opacity-10 border-0 h-100">
                 <div className="card-body p-4 text-center">
-                  <i className="bi bi-building text-warning mb-3" style={{ fontSize: '3rem' }}></i>
+                  <i className="bi bi-person-badge mb-3" style={{ fontSize: '3rem', color: '#f5c065' }}></i>
+                  <h5 className="fw-bold mb-3">Associate Prof. Dr. Norisma Binti Idris</h5>
+                  <p className="text-white-50 small mb-2">
+                    <em>FYP Supervisor - Dean of FSKTM</em>
+                  </p>
+                  <p className="text-white-50 mb-0" style={{ fontSize: '0.95rem' }}>
+                    For her invaluable support, guidance, and encouragement throughout FYP1 and FYP2. Her insights and advice have been instrumental in shaping this project and ensuring its success.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card bg-white bg-opacity-10 border-0 h-100">
+                <div className="card-body p-4 text-center">
+                  <i className="bi bi-mortarboard mb-3" style={{ fontSize: '3rem', color: '#3dac7aff' }}></i>
+                  <h5 className="fw-bold mb-3">Associate Prof. Dr. Salinah Binti Ja'afar</h5>
+                  <p className="text-white-50 small mb-2">
+                    <em>Academy of Malay Studies</em>
+                  </p>
+                  <p className="text-white-50 mb-0" style={{ fontSize: '0.95rem' }}>
+                    For her expertise and assistance in validating the project output. Her contributions have been vital in enabling the Confusion Matrix analysis to evaluate the application's performance.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card bg-white bg-opacity-10 border-0 h-100">
+                <div className="card-body p-4 text-center">
+                  <i className="bi bi-palette mb-3" style={{ fontSize: '3rem', color: '#e63946' }}></i>
+                  <h5 className="fw-bold mb-3">Chia Poosanisa</h5>
+                  <p className="text-white-50 small mb-2">
+                    <em>UI/UX Designer</em>
+                  </p>
+                  <p className="text-white-50 mb-0" style={{ fontSize: '0.95rem' }}>
+                    For her creative input and support in advising on the UI design and designing the Tatabahasa logo. Her efforts have truly enriched the aesthetic and functional aspects of the project.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <div className="row g-4 mb-5">
+            <div className="col-12">
+              <div className="card bg-white bg-opacity-10 border-0">
+                <div className="card-body p-4 text-center">
+                  <i className="bi bi-building mb-3" style={{ fontSize: '2.5rem', color: '#f5c065' }}></i>
                   <h5 className="fw-bold mb-3">JamAI Base</h5>
                   <p className="text-white-50 mb-0">
                     For providing the platform and access to powerful LLM models that made this research possible
@@ -355,31 +433,17 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
-              <div className="card bg-white bg-opacity-10 border-0 h-100">
-                <div className="card-body p-4 text-center">
-                  <i className="bi bi-person-badge text-success mb-3" style={{ fontSize: '3rem' }}></i>
-                  <h5 className="fw-bold mb-3">Project Supervisor</h5>
-                  <p className="text-white-50 mb-0">
-                    For guidance, insights, and continuous support throughout this Final Year Project
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="card bg-white bg-opacity-10 border-0 h-100">
-                <div className="card-body p-4 text-center">
-                  <i className="bi bi-mortarboard text-info mb-3" style={{ fontSize: '3rem' }}></i>
-                  <h5 className="fw-bold mb-3">University</h5>
-                  <p className="text-white-50 mb-0">
-                    For providing the opportunity and resources to conduct this research project
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          </div> */}
           <div className="text-center mt-5">
-            <Link href="/normalize" className="btn btn-light btn-lg px-5 py-3">
+            <Link
+              href="/normalize"
+              className="btn btn-lg px-5 py-3 fw-semibold"
+              style={{
+                backgroundColor: '#f5c065',
+                border: 'none',
+                color: '#2c3e50'
+              }}
+            >
               <i className="bi bi-play-circle me-2"></i>
               Try the Demo
             </Link>
@@ -388,7 +452,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-4 bg-dark text-white-50">
+      <footer className="py-4 bg-dark text-white-50 bg-secondary">
         <div className="container">
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
