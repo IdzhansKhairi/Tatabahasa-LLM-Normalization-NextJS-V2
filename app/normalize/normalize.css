@@ -1,0 +1,36 @@
+.background-body{
+    background-color: rgb(247, 248, 249);
+}
+
+.resize-none{
+    resize: none;
+}
+
+.custom-btn-color{
+    background: #f5c065;
+}
+
+.custom-btn-color:hover{
+    background: #ffd893;
+}
+
+.bg-normalized{
+    background: #f6ffed !important;
+    background-color: #f6ffed !important;
+}
+
+.bg-original {
+    background: #ffeded;
+}
+
+.border-l-original {
+    --tw-border-opacity: 1;
+    border-left-color: #dc3545;
+    border-left-width: 4px;
+}
+
+.border-l-normalized {
+    --tw-border-opacity: 1;
+    border-left-color: #198754;
+    border-left-width: 4px;
+}
