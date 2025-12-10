@@ -38,3 +38,33 @@
 .footer-bg {
     background: #acaeb1;
 }
+
+/* Mobile Responsive Improvements */
+@media (max-width: 576px) {
+    .card {
+        margin-bottom: 0.75rem;
+    }
+
+    .card-body {
+        padding: 0.75rem !important;
+    }
+
+    .card-header {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    textarea {
+        font-size: 0.9rem !important;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.85rem;
+    }
+}

@@ -208,26 +208,28 @@ export default function NormalizePage() {
 
     return (
         <div>
-            <header className="px-3 py-2 border-bottom bg-white shadow-sm">
-                <div className="d-flex align-items-center justify-content-between">
+            <header className="px-2 px-md-3 py-2 border-bottom bg-white shadow-sm">
+                <div className="d-flex align-items-center justify-content-between flex-wrap gap-2">
                     <div className="d-flex align-items-center">
                         <Link href="/" className="text-decoration-none d-flex align-items-center">
-                            <Image className="me-2" src="/images/tatabahasa_logo.PNG" alt="Tatabahasa Logo" width={80} height={40} />
-                            <h5 className="medium p-0 m-0 text-dark"><strong>LLM Malay Text Normalization</strong></h5>
+                            <Image className="me-2" src="/images/tatabahasa_logo.PNG" alt="Tatabahasa Logo" width={60} height={30} style={{ width: 'auto', height: '30px' }} />
+                            <h6 className="medium p-0 m-0 text-dark d-none d-sm-block"><strong>LLM Malay Text Normalization</strong></h6>
+                            <h6 className="medium p-0 m-0 text-dark d-sm-none" style={{ fontSize: '0.9rem' }}><strong>Tatabahasa</strong></h6>
                         </Link>
                     </div>
                     <Link href="/" className="btn btn-outline-primary btn-sm">
                         <i className="bi bi-arrow-left me-1"></i>
-                        Back to Home
+                        <span className="d-none d-sm-inline">Back to Home</span>
+                        <span className="d-sm-none">Home</span>
                     </Link>
                 </div>
             </header>
 
             {/* Actual UI Looks */}
-            <div className="background-body p-3" style={{ minHeight: "calc(100vh - 80px)", backgroundColor: "#f0f2f5" }}>
+            <div className="background-body p-2 p-md-3" style={{ minHeight: "calc(100vh - 80px)", backgroundColor: "#f0f2f5" }}>
                 <div className="container-fluid">
-                    <div className="row align-items-stretch mb-4">
-                        <div className="col-6 d-flex">
+                    <div className="row align-items-stretch mb-3 mb-md-4">
+                        <div className="col-12 col-md-6 d-flex mb-3 mb-md-0">
                             <div className="card flex-fill">
                                 <div className="card-header bg-original">
                                     <div className="d-flex align-items-center">
@@ -270,7 +272,7 @@ export default function NormalizePage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-6 d-flex">
+                        <div className="col-12 col-md-6 d-flex">
                             <div className="card flex-fill">
                                 <div className="card-header bg-normalized">
                                     <div className="d-flex align-items-center">
@@ -300,7 +302,7 @@ export default function NormalizePage() {
                         </div>
                     </div>
 
-                    <div className="row mb-4">
+                    <div className="row mb-3 mb-md-4">
                         <div className="col-12">
                             <div className="card">
                                 <div className="card-header">
@@ -310,32 +312,32 @@ export default function NormalizePage() {
                                     </div>
                                 </div>
                                 <div className="card-body">
-                                    <div className="p-3">
-                                        <div className="row mb-4 align-items-stretch">
-                                            <div className="col-8 d-flex flex-column">
+                                    <div className="p-2 p-md-3">
+                                        <div className="row mb-3 mb-md-4 align-items-stretch">
+                                            <div className="col-12 col-lg-8 d-flex flex-column mb-3 mb-lg-0">
                                                 <div className="mb-3 flex-grow-1">
                                                     <div className="d-flex align-items-center mb-2">
                                                         <i className="bi bi-file-text me-2"></i>
-                                                        <h5 className="p-0 m-0"><strong>Original Text</strong></h5>
+                                                        <h6 className="p-0 m-0"><strong>Original Text</strong></h6>
                                                     </div>
-                                                    <div className="card p-3 border-l-original">
-                                                        <div className="text-secondary">{originalText ? <i>"{originalText}"</i> : "Original text will be here..."}</div>
+                                                    <div className="card p-2 p-md-3 border-l-original">
+                                                        <div className="text-secondary small">{originalText ? <i>"{originalText}"</i> : "Original text will be here..."}</div>
                                                     </div>
 
                                                 </div>
                                                 <div className="flex-grow-1">
                                                     <div className="d-flex align-items-center mb-2">
                                                         <i className="bi bi-check-circle me-2"></i>
-                                                        <h5 className="p-0 m-0"><strong>Normalized Text</strong></h5>
+                                                        <h6 className="p-0 m-0"><strong>Normalized Text</strong></h6>
                                                     </div>
-                                                    <div className="card p-3 border-l-normalized">
-                                                        <div className="text-secondary">{normalizedText ? <i>"{normalizedText}"</i> : "Normalized Malay text will be here..."}</div>
+                                                    <div className="card p-2 p-md-3 border-l-normalized">
+                                                        <div className="text-secondary small">{normalizedText ? <i>"{normalizedText}"</i> : "Normalized Malay text will be here..."}</div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="col-4 d-flex">
+                                            <div className="col-12 col-lg-4 d-flex">
                                                 <div className="card h-100 w-100">
-                                                    <div className="row g-3 p-3">
+                                                    <div className="row g-2 g-md-3 p-2 p-md-3">
                                                         <div className="col-6">
                                                             <Statistic
                                                                 title="Original Words"
@@ -408,6 +410,7 @@ export default function NormalizePage() {
                                                             emptyText: 'No normalization changes yet. Enter text and click "Normalize text" to see the analysis.'
                                                         }}
                                                         size="small"
+                                                        scroll={{ x: 'max-content' }}
                                                         rowKey={(record, index) => `${record.original_word}-${index}`}
                                                     />
                                                 </div>
@@ -419,7 +422,7 @@ export default function NormalizePage() {
                         </div>
                     </div>
 
-                    <div className="row mb-4">
+                    <div className="row mb-3 mb-md-4">
                         <div className="col-12">
                             <div className="card">
                                 <div className="card-header">
@@ -428,13 +431,13 @@ export default function NormalizePage() {
                                         <label>Informal Features Percentage</label>
                                     </div>
                                 </div>
-                                <div className="card-body">
-                                    
+                                <div className="card-body p-2 p-md-3">
+
                                     {informalFeaturesData ? (
-                                        
+
                                         <div className="row">
                                             {/* Main Formal vs Informal Donut Chart */}
-                                            <div className="col-md-4">
+                                            <div className="col-12 col-md-4 mb-4 mb-md-0">
                                                 <div className="text-center mb-3">
                                                     <h6><strong>Overall Analysis</strong></h6>
                                                 </div>
@@ -450,6 +453,12 @@ export default function NormalizePage() {
                                                         }
                                                     ]}
                                                     angleField="value"
+                                                    label={
+                                                        {
+                                                            text: 'type',
+                                                            position: 'outside'
+                                                        }
+                                                    }
                                                     colorField="type"
                                                     color={['#52c41a', '#ff4d4f']}
                                                     legend={{
@@ -464,15 +473,15 @@ export default function NormalizePage() {
                                             </div>
 
                                             {/* Breakdown of Informal Features */}
-                                            <div className="col-md-8">
+                                            <div className="col-12 col-md-8">
                                                 <div className="text-center mb-3">
                                                     <h6><strong>Informal Features Breakdown</strong></h6>
                                                 </div>
-                                                <div className="row g-3">
+                                                <div className="row g-2 g-md-3">
                                                     {/* Slang */}
-                                                    <div className="col-md-6">
+                                                    <div className="col-12 col-sm-6">
                                                         <div className="card border">
-                                                            <div className="card-body p-3">
+                                                            <div className="card-body p-2 p-md-3">
                                                                 <div className="d-flex justify-content-between align-items-center mb-2">
                                                                     <span><strong>Slang</strong></span>
                                                                     <span className="badge bg-danger">{informalFeaturesData.informal_features?.slang?.percentage?.toFixed(2)}%</span>
@@ -491,9 +500,9 @@ export default function NormalizePage() {
                                                     </div>
 
                                                     {/* Short Forms */}
-                                                    <div className="col-md-6">
+                                                    <div className="col-12 col-sm-6">
                                                         <div className="card border">
-                                                            <div className="card-body p-3">
+                                                            <div className="card-body p-2 p-md-3">
                                                                 <div className="d-flex justify-content-between align-items-center mb-2">
                                                                     <span><strong>Short Forms</strong></span>
                                                                     <span className="badge bg-warning text-dark">{informalFeaturesData.informal_features?.short_forms?.percentage?.toFixed(1)}%</span>
@@ -512,9 +521,9 @@ export default function NormalizePage() {
                                                     </div>
 
                                                     {/* Contractions */}
-                                                    <div className="col-md-6">
+                                                    <div className="col-12 col-sm-6">
                                                         <div className="card border">
-                                                            <div className="card-body p-3">
+                                                            <div className="card-body p-2 p-md-3">
                                                                 <div className="d-flex justify-content-between align-items-center mb-2">
                                                                     <span><strong>Contractions</strong></span>
                                                                     <span className="badge bg-info">{informalFeaturesData.informal_features?.contractions?.percentage?.toFixed(1)}%</span>
@@ -533,9 +542,9 @@ export default function NormalizePage() {
                                                     </div>
 
                                                     {/* English Usage */}
-                                                    <div className="col-md-6">
+                                                    <div className="col-12 col-sm-6">
                                                         <div className="card border">
-                                                            <div className="card-body p-3">
+                                                            <div className="card-body p-2 p-md-3">
                                                                 <div className="d-flex justify-content-between align-items-center mb-2">
                                                                     <span><strong>English Usage</strong></span>
                                                                     <span className="badge bg-primary">{informalFeaturesData.informal_features?.english_usage?.percentage?.toFixed(1)}%</span>
@@ -554,9 +563,9 @@ export default function NormalizePage() {
                                                     </div>
 
                                                     {/* Typos & Spelling */}
-                                                    <div className="col-md-6">
+                                                    <div className="col-12 col-sm-6">
                                                         <div className="card border">
-                                                            <div className="card-body p-3">
+                                                            <div className="card-body p-2 p-md-3">
                                                                 <div className="d-flex justify-content-between align-items-center mb-2">
                                                                     <span><strong>Typos & Spelling</strong></span>
                                                                     <span className="badge bg-secondary">{informalFeaturesData.informal_features?.typos_spelling?.percentage?.toFixed(1)}%</span>
@@ -590,21 +599,21 @@ export default function NormalizePage() {
 
                 </div>
             </div>
-            <footer className="py-4 border-top footer-bg">
-                <div className="container text-center">
-                    <div className="mb-3">
-                        <span className="text-muted">
-                            <i className="bi bi-code-slash me-2"></i>
+            <footer className="py-3 py-md-4 border-top footer-bg">
+                <div className="container text-center px-2 px-md-3">
+                    <div className="mb-2 mb-md-3">
+                        <span className="text-muted" style={{ fontSize: 'clamp(0.85rem, 2vw, 1rem)' }}>
+                            <i className="bi bi-code-slash me-1 me-md-2"></i>
                             Built with <strong>Next.js</strong> & <strong>JamAI Base</strong>
                         </span>
                     </div>
-                    <div className="d-flex justify-content-center align-items-center gap-3">
+                    <div className="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-2 gap-md-3">
                         <a
                             href="https://nextjs.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn btn-sm btn-outline-dark"
-                            style={{ borderRadius: '20px' }}
+                            className="btn btn-sm btn-outline-dark w-100"
+                            style={{ borderRadius: '20px', maxWidth: '180px' }}
                         >
                             <i className="bi bi-arrow-up-right-circle me-1"></i>
                             Next.js
@@ -613,8 +622,8 @@ export default function NormalizePage() {
                             href="https://jamaibase.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn btn-sm btn-outline-dark"
-                            style={{ borderRadius: '20px' }}
+                            className="btn btn-sm btn-outline-dark w-100"
+                            style={{ borderRadius: '20px', maxWidth: '180px' }}
                         >
                             <i className="bi bi-arrow-up-right-circle me-1"></i>
                             JamAI Base

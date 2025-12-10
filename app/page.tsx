@@ -9,7 +9,7 @@ export default function Home() {
       {/* Floating Navigation Button */}
       <Link
         href="/normalize"
-        className="btn position-fixed shadow-lg d-flex align-items-center gap-2"
+        className="btn position-fixed shadow-lg d-flex align-items-center gap-2 d-none d-md-flex"
         style={{
           top: '20px',
           right: '20px',
@@ -23,49 +23,50 @@ export default function Home() {
         }}
       >
         <i className="bi bi-pencil-square"></i>
-        Try It Now
+        <span className="d-none d-lg-inline">Try It Now</span>
       </Link>
 
       {/* Hero Section */}
-      <section className="min-vh-100 d-flex align-items-center" style={{
+      <section className="min-vh-100 d-flex align-items-center py-5" style={{
         background: 'linear-gradient(135deg, #e8d5b7 0%, #f5e6d3 100%)',
         color: '#2c3e50'
       }}>
-        <div className="container">
+        <div className="container px-3 px-md-4">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
-              <div className="mb-3">
+              <div className="mb-3 text-center text-lg-start">
                 <span className="badge px-3 py-2" style={{
-                  fontSize: '0.9rem',
+                  fontSize: '0.85rem',
                   backgroundColor: '#e63946',
                   color: 'white'
                 }}>
                   Final Year Project
                 </span>
               </div>
-              <h1 className="fw-bold mb-4" style={{
+              <h1 className="fw-bold mb-3 mb-md-4 text-center text-lg-start" style={{
                 lineHeight: '1.2',
-                fontSize: '3.5rem',
+                fontSize: 'clamp(2rem, 5vw, 3.5rem)',
                 color: '#2d6a4f'
               }}>
                 Malay Language Text Normalization
               </h1>
-              <p className="lead mb-4" style={{
-                fontSize: '1.2rem',
+              <p className="mb-3 mb-md-4 text-center text-lg-start" style={{
+                fontSize: 'clamp(1rem, 2vw, 1.2rem)',
                 color: '#495057'
               }}>
                 A research project exploring AI-powered normalization of informal Malay text
                 using Large Language Models through JamAI Base platform.
               </p>
-              <div className="p-4 bg-white rounded-4 shadow-sm" style={{ display: 'inline-block' }}>
-                <div className="d-flex gap-3 flex-wrap">
+              <div className="p-3 p-md-4 bg-white rounded-4 shadow-sm mx-auto" style={{ maxWidth: '100%' }}>
+                <div className="d-flex flex-column flex-sm-row gap-2 gap-sm-3 justify-content-center justify-content-lg-start">
                   <Link
                     href="/normalize"
-                    className="btn btn-lg px-4 py-3 fw-semibold"
+                    className="btn btn-lg px-3 px-md-4 py-2 py-md-3 fw-semibold w-100 w-sm-auto"
                     style={{
                       backgroundColor: '#f5c065',
                       border: 'none',
-                      color: '#2c3e50'
+                      color: '#2c3e50',
+                      fontSize: 'clamp(0.9rem, 2vw, 1rem)'
                     }}
                   >
                     <i className="bi bi-play-circle me-2"></i>
@@ -75,11 +76,12 @@ export default function Home() {
                     href="https://github.com/IdzhansKhairi/Tatabahasa-LLM-Normalization-NextJS-V2"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-lg px-4 py-3 fw-semibold"
+                    className="btn btn-lg px-3 px-md-4 py-2 py-md-3 fw-semibold w-100 w-sm-auto"
                     style={{
                       backgroundColor: '#2d6a4f',
                       border: 'none',
-                      color: 'white'
+                      color: 'white',
+                      fontSize: 'clamp(0.9rem, 2vw, 1rem)'
                     }}
                   >
                     <i className="bi bi-github me-2"></i>
@@ -88,14 +90,15 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 text-center">
-              <div className="p-4 bg-white rounded-4 shadow-lg">
+            <div className="col-lg-6 text-center mt-4 mt-lg-0">
+              <div className="p-3 p-md-4 bg-white rounded-4 shadow-lg">
                 <Image
                   src="/images/tatabahasa_logo.PNG"
                   alt="Tatabahasa Logo"
                   width={400}
                   height={200}
                   style={{ width: '100%', height: 'auto' }}
+                  priority
                 />
               </div>
             </div>
